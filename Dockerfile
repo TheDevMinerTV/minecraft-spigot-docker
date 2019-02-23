@@ -7,7 +7,7 @@ FROM debian:jessie
 MAINTAINER TheDevMinerTV <tobigames200@gmail.com>
 
 # Drives which version we are going to install
-ENV SPIGOT_VERSION 1.12.2
+ENV SPIGOT_VERSION 1.13.2
 
 # Use APT (Advanced Packaging Tool) built in the Linux distro to download Java, a dependency
 # to run Minecraft.
