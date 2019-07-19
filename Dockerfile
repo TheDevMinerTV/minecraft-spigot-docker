@@ -17,7 +17,7 @@ ENV SPIGOT_VERSION 1.14.3
 # Finally, we download the correct .jar file using wget
 # .jar file fetched from the official page spigot page https://cdn.getbukkit.org/spigot/spigot-<VERSION>.jar
 
-RUN apt install -y openjdk-8-jre-headless ca-certificates-java wget nano; \
+RUN apt update && apt install -y openjdk-8-jre-headless ca-certificates-java wget nano; \
     wget -q https://cdn.getbukkit.org/spigot/spigot-${SPIGOT_VERSION}.jar -O /minecraft_server-${SPIGOT_VERSION}.jar;
 # We do the above in a single line to reduce the number of layers in our container
 
