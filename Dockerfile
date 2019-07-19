@@ -2,7 +2,7 @@
 
 # Use the offical Debian Docker image with a specified version tag, Jessie, so not all
 # versions of Debian images are downloaded.
-FROM debian:jessie
+FROM debian:stretch
 
 MAINTAINER TheDevMinerTV <tobigames200@gmail.com>
 
@@ -17,9 +17,7 @@ ENV SPIGOT_VERSION 1.14.3
 # Finally, we download the correct .jar file using wget
 # .jar file fetched from the official page spigot page https://cdn.getbukkit.org/spigot/spigot-<VERSION>.jar
 
-RUN echo "deb http://http.debian.net/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list; \
-    apt-get -y update; \
-    apt install -y -t jessie-backports openjdk-8-jre-headless ca-certificates-java wget nano; \
+RUN apt install -y -t openjdk-8-jre-headless ca-certificates-java wget nano; \
     wget -q https://cdn.getbukkit.org/spigot/spigot-${SPIGOT_VERSION}.jar -O /minecraft_server-${SPIGOT_VERSION}.jar;
 # We do the above in a single line to reduce the number of layers in our container
 
