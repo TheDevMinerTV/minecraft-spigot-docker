@@ -1,8 +1,8 @@
 # Minecraft Spigot 1.14.3 Dockerfile - Example with notes
 
-# Use the offical Debian Docker image with a specified version tag, Jessie, so not all
-# versions of Debian images are downloaded.
-FROM debian:stretch
+# Use the offical Ubuntu Docker image with a specified version tag, Bionic, so not all
+# versions of Ubuntu images are downloaded.
+FROM ubuntu:bionic
 
 MAINTAINER TheDevMinerTV <tobigames200@gmail.com>
 
