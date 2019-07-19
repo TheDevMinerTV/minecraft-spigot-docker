@@ -1,4 +1,4 @@
-# Minecraft Spigot 1.13.2 Dockerfile - Example with notes
+# Minecraft Spigot 1.14.3 Dockerfile - Example with notes
 
 # Use the offical Debian Docker image with a specified version tag, Jessie, so not all
 # versions of Debian images are downloaded.
@@ -7,7 +7,7 @@ FROM debian:jessie
 MAINTAINER TheDevMinerTV <tobigames200@gmail.com>
 
 # Drives which version we are going to install
-ENV SPIGOT_VERSION 1.13.2
+ENV SPIGOT_VERSION 1.14.3
 
 # Use APT (Advanced Packaging Tool) built in the Linux distro to download Java, a dependency
 # to run Minecraft.
